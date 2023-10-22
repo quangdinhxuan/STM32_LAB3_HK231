@@ -74,7 +74,7 @@ int main(void)
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
-
+  HAL_TIM_Base_Start_IT (& htim2 ) ;
   /* Configure the system clock */
   SystemClock_Config();
 
@@ -89,8 +89,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  setTimer0(1000);
   while (1)
   {
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -135,7 +137,10 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+int counter = 100;
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+	timerRun0();
+}
 /* USER CODE END 4 */
 
 /**
