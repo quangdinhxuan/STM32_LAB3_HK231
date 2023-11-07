@@ -72,10 +72,8 @@ void timeforver(int num0, int num1){
 	}
 }
 void fsm_automatic_run(){
-	int index0 = 0; // used for 7seg VER INDEX0_INDEX1
-	int index1 = 0;
-	int index2 = 0; // used for 7seg HOR INDEX2_INDEX3
-	int index3 = 0;
+	int index0 = 0;int index1 = 0; // used for 7seg VER INDEX0_INDEX1
+	int index2 = 0;int index3 = 0; // used for 7seg HOR INDEX2_INDEX3
 	switch(status){
 	case INIT:
 		status = RED_GREEN;
@@ -83,7 +81,6 @@ void fsm_automatic_run(){
 		setTimer(0,green_time); //time duration for 7segleg
 		setTimer(1,50); // time duration for enable trigger
 		setTimer(2,100); // time duration for reducing 1 second
-
 		enable_trigger = 0;
 		break;
 	case RED_GREEN:
@@ -94,7 +91,6 @@ void fsm_automatic_run(){
 			setTimer(0,yellow_time);
 			update_countdown(RED_YELLOW);
 		}
-
 		numberdisplay2led_ab(tmp_red, &index0, &index1);
 		numberdisplay2led_ab(tmp_green, &index2, &index3);
 		timeforver(index0, index1);
@@ -105,10 +101,6 @@ void fsm_automatic_run(){
 			tmp_green--;
 			setTimer(2,100);
 		}
-
-
-
-
 		button1_work();
 		break;
 	case RED_YELLOW:
@@ -120,21 +112,16 @@ void fsm_automatic_run(){
 			setTimer(0,green_time);
 			update_countdown(GREEN_RED);
 		}
-
 		numberdisplay2led_ab(tmp_red, &index0, &index1);
 		numberdisplay2led_ab(tmp_yellow, &index2, &index3);
-
 		timeforver(index0, index1);
 		timeforhor(index2, index3);
-
 		enablechange();
 		if (timer_flag[2] == 1){
 					tmp_red--;
 					tmp_yellow--;
 					setTimer(2,100);
-				}
-
-
+			}
 		button1_work();
 		break;
 	case GREEN_RED:
@@ -145,20 +132,16 @@ void fsm_automatic_run(){
 			setTimer(0,yellow_time);
 			update_countdown(YELLOW_RED);
 		}
-
 		numberdisplay2led_ab(tmp_green, &index0, &index1);
 		numberdisplay2led_ab(tmp_red, &index2, &index3);
 		timeforver(index0, index1);
 		timeforhor(index2, index3);
-
 		enablechange();
 		if (timer_flag[2] == 1){
 			tmp_green--;
 			tmp_red--;
 			setTimer(2,100);
 		}
-
-
 		button1_work();
 		break;
 	case YELLOW_RED:
@@ -169,22 +152,17 @@ void fsm_automatic_run(){
 			setTimer(0,yellow_time);
 			update_countdown(RED_GREEN);
 		}
-
 		numberdisplay2led_ba(tmp_yellow, &index0, &index1);
 		numberdisplay2led_ba(tmp_red, &index2, &index3);
 
 		timeforver(index0, index1);
 		timeforhor(index2, index3);
-
 		enablechange();
 		if (timer_flag[2] == 1){
 			tmp_yellow--;
 			tmp_red--;
 			setTimer(2,100);
 		}
-
-
-
 		button1_work();
 		break;
 
