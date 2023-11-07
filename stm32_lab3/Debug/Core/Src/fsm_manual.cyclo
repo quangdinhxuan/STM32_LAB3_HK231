@@ -1,0 +1,4 @@
+../Core/Src/fsm_manual.c:9:6:button1_work	9
+../Core/Src/fsm_manual.c:27:6:button2_work	8
+../Core/Src/fsm_manual.c:51:6:button3_work	5
+../Core/Src/fsm_manual.c:69:6:fsm_manual_run	7

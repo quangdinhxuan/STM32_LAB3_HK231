@@ -1,0 +1,12 @@
+../Core/Src/led.c:10:6:reset_LED	8	static
+../Core/Src/led.c:18:6:set_LED_RED_ver	8	static
+../Core/Src/led.c:25:6:set_LED_GREEN_ver	8	static
+../Core/Src/led.c:31:6:set_LED_YELLOW_ver	8	static
+../Core/Src/led.c:36:6:set_LED_RED_hor	8	static
+../Core/Src/led.c:43:6:set_LED_GREEN_hor	8	static
+../Core/Src/led.c:49:6:set_LED_YELLOW_hor	8	static
+../Core/Src/led.c:54:6:blinky_red_led	8	static
+../Core/Src/led.c:61:6:blinky_green_led	8	static
+../Core/Src/led.c:68:6:blinky_yellow_led	8	static
+../Core/Src/led.c:75:6:display7SEGhor	16	static
+../Core/Src/led.c:171:6:display7SEGver	16	static

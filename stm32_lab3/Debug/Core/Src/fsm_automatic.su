@@ -1,0 +1,6 @@
+../Core/Src/fsm_automatic.c:19:6:number_for2led	24	static
+../Core/Src/fsm_automatic.c:24:6:update_countdown	16	static
+../Core/Src/fsm_automatic.c:41:6:enablechange	8	static
+../Core/Src/fsm_automatic.c:51:6:timeforhor	16	static
+../Core/Src/fsm_automatic.c:63:6:timeforver	16	static
+../Core/Src/fsm_automatic.c:75:6:fsm_automatic_run	24	static
